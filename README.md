@@ -1,1 +1,2 @@
-[![Build status](https://ci.appveyor.com/api/projects/status/byhpt7kg1c460pys?svg=true)](https://ci.appveyor.com/project/sashkin080/Testing-web-interfaces)
+[![Build status](https://ci.appveyor.com/api/projects/status/acp9iir3s6ifwmo0?svg=true)](https://ci.appveyor.com/project/sashkin080/testing-web-interfaces)
+
