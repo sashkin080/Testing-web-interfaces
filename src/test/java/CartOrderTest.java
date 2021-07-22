@@ -61,22 +61,7 @@ public class CartOrderTest {
 
 
 
-    }
-   // @Test
-   // void cardTest() {
-   //     driver.get("http://localhost:9999/");
-        //  driver.findElement() .sendKeys("Александр");
-        //  driver.findElement() .sendKeys("+79045555555");
-   //     List<WebElement> textField = driver.findElements(By.className("input__control"));
-   //     textField.get(0).sendKeys("Александр");
-   //     textField.get(1).sendKeys("+79045555555");
-    //    driver.findElement(By.className("checkbox__box")) .click();
-   //     driver.findElement(By.className("button")) .click();
-    //    String actualText = driver.findElement(By.className("paragraph")) .getText().trim();
-    //    String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
-     //   Assertions.assertEquals(expectedText, actualText);
+}
 
-
-   // }
 
 
