@@ -32,7 +32,7 @@ public class CartOrderTest {
     }
 
     @Test
-    void ShouldBePositiveTest () {
+    void ShouldBePositiveTest() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иванов Иван- Иван");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79045555555");
@@ -47,7 +47,7 @@ public class CartOrderTest {
     }
 
     @Test
-    void ShouldBePositiveTest1 () {
+    void ShouldBePositiveTest1() {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иван");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79999999999");
@@ -57,8 +57,6 @@ public class CartOrderTest {
         String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedText, actualText);
     }
-
-
 
 
 }
