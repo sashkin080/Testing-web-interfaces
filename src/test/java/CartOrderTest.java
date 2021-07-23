@@ -36,9 +36,6 @@ public class CartOrderTest {
         driver.get("http://localhost:9999/");
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иванов Иван- Иван");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79045555555");
-        // List<WebElement> textField = driver.findElements(By.className("input__control"));
-        // textField.get(0).sendKeys("Александр");
-        // textField.get(1).sendKeys("+79045555555");
         driver.findElement(By.cssSelector("[class=\"checkbox__box\"]")).click();
         driver.findElement(By.cssSelector("button")).click();
         String actualText = driver.findElement(By.cssSelector("p")).getText().trim();
