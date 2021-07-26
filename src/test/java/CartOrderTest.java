@@ -22,7 +22,8 @@ public class CartOrderTest {
         options.addArguments("--disable-dev-shm-usage");
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999/");
     }
 
     @AfterEach
@@ -32,25 +33,23 @@ public class CartOrderTest {
     }
 
     @Test
-    void ShouldBePositiveTest() {
-        driver.get("http://localhost:9999/");
+    void shouldBePositiveTest() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иванов Иван- Иван");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79045555555");
         driver.findElement(By.cssSelector("[class=\"checkbox__box\"]")).click();
         driver.findElement(By.cssSelector("button")).click();
-        String actualText = driver.findElement(By.cssSelector("p")).getText().trim();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedText, actualText);
     }
 
     @Test
-    void ShouldBePositiveTest1() {
-        driver.get("http://localhost:9999/");
+    void shouldBePositiveTest1() {
         driver.findElement(By.cssSelector("[type='text']")).sendKeys("Иван");
         driver.findElement(By.cssSelector("[type='tel']")).sendKeys("+79999999999");
         driver.findElement(By.cssSelector("[class=\"checkbox__box\"]")).click();
         driver.findElement(By.cssSelector("button")).click();
-        String actualText = driver.findElement(By.cssSelector("p")).getText().trim();
+        String actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
         String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedText, actualText);
     }
