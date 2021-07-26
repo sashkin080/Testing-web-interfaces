@@ -39,7 +39,7 @@ public class CartOrderTest {
         driver.findElement(By.cssSelector("[class=\"checkbox__box\"]")).click();
         driver.findElement(By.cssSelector("button")).click();
         String actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
-        String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее врем.";
+        String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedText, actualText);
     }
 
@@ -50,7 +50,7 @@ public class CartOrderTest {
         driver.findElement(By.cssSelector("[class=\"checkbox__box\"]")).click();
         driver.findElement(By.cssSelector("button")).click();
         String actualText = driver.findElement(By.cssSelector("[data-test-id=order-success]")).getText().trim();
-        String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее врем.";
+        String expectedText = "Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.";
         Assertions.assertEquals(expectedText, actualText);
     }
 
